@@ -8,7 +8,9 @@ import Footer from '../src/client/components/Footer';
 hydrate(
   <BrowserRouter>
     <Header />
+    <hr/>
     <App />
+    <hr/>
     <Footer />
   </BrowserRouter>,
   document.getElementById('root')
