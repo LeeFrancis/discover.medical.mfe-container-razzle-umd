@@ -28,10 +28,5 @@ function FactoryComponent(moduleName, componentName) {
 }
 
 export default class MicroFrontends extends Component {
-  static Cart = FactoryComponent('Cart', 'CartComponent');
-  static Product = FactoryComponent('Product', 'ProductComponent');
-  static Header = FactoryComponent('Core', 'HeaderComponent');
-  static Footer = FactoryComponent('Core', 'FooterComponent');
-  static ResultList = FactoryComponent('ResultList', 'ResultListComponent');
   static Topic = FactoryComponent('Topic', 'TopicComponent');
 }

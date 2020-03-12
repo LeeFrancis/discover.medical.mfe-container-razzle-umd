@@ -7,8 +7,6 @@ import FactoryComponent from '../src/client/components/FactoryComponent';
 const App = () => (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route exact path="/product" component={FactoryComponent.Product} />
-    <Route exact path="/results" component={FactoryComponent.ResultList} />
     <Route path="/topic" component={FactoryComponent.Topic} />
   </Switch>
 );
