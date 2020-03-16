@@ -1,0 +1,252 @@
+/* **********
+  These variables come from the Library.
+  We want to remove connections from the UI to the Library as much as possible.
+  This is part of that process.
+********** */
+:root {
+    /* ANIMATION */
+    --Animation-basic-rotate: transform .25s linear;
+    --Animation-drawer-in: max-height cubic-bezier(.86, 0, .07, 1) .4s;
+    --Animation-drawer-out: max-height cubic-bezier(.86, 0, .07, 1) .25s;
+    /* BACKGROUNDS */
+    --background--hero: url('../src/application/assets/hero.jpg') 90% center no-repeat; /* stylelint-disable-line */
+  
+    /* LOGO */
+    --brand--logo-height: 1.25rem;
+    --brand--logo-height--bp-sm: 2rem;
+    --brand--logo-height--bp-md: 2.5rem;
+    --brand--logo-margin-top: .25rem;
+  
+    /* PRODUCT BAR */
+    --brand--productbar-height: 18rem;
+    --brand--productbar-padding--bp-sm: 5rem .75rem;
+    --brand--producttext-display: block;
+  
+    /* FOOTER */
+    --brand--footer-logo-height: 1rem;
+    --brand--footer-logo-height--bp-sm: 1rem;
+  
+    /* COOL BAR */
+    --brand--coolbar-display: none;
+    --brand--coolbar-background: inherit;
+  
+    /* COLOR */
+    --white: #fff;
+    --gray--200: #f4f4f4;
+    --gray--300: #eaeaea;
+    --gray--400: #d9dadb;
+    --gray--500: #b8bbbf;
+    --gray--600: #9b9b9b;
+    --gray--700: #646668;
+    --gray--800: #3d3f42;
+    --gray--900: #333;
+    --black: #000;
+    --purple: #636;
+    --green: #0c8f4f;
+    --red: #a31d07;
+    --orange: #ea9138;
+    --brand-color--1: #042e50;
+    --brand-color--2: #0c5ba6;
+    --theme-color--1: #1e6785;
+    --theme-color--2: #267494;
+    --theme-color--3: #3d92b4;
+    --theme-color--4: #99c2cc;
+    --theme-color--5: #99dee9;
+    --theme-color--accent: #f9a24b;
+    --theme-color--error: #a31d07;
+    --theme-color--warning: #ea9138;
+    --theme-color--success: #0c8f4f;
+    --color--primary: #1e6785;
+    --color--secondary: #042e50;
+    --color--accent: #f9a24b;
+    --color--light: #9b9b9b;
+    --brand-color--1--shade: color(#042e50 shade(20%));
+    --brand-color--1--tint: color(#042e50 tint(80%));
+    --theme-color--2--shade: color(#267494 shade(10%));
+    --theme-color--5--tint: color(#99dee9 tint(80%));
+    --theme-color--accent--shade: color(#f9a24b shade(10%));
+    --theme-color--accent--tint: color(#f9a24b tint(80%));
+    --gray--600--shade: color(#9b9b9b shade(10%));
+    --gray--600--tint: color(#9b9b9b tint(80%));
+    --color-text--white: #fff;
+    --color-text--link: #267494;
+    --color-text--link--secondary: #0079a8;
+    --color-text--link-visited: #636;
+    --color-text--primary: #3d3f42;
+    --color-text--secondary: #646668;
+    --color-text--tertiary: #1e6785;
+    --color-text--quaternary: #d9dadb;
+    --color-text--ternary: #f9a24b;
+    --color-text--placeholder: #767676;
+    --color-background--primary: #267494;
+    --color-background--secondary: #042e50;
+    --color-background--tertiary: #1e6785;
+    --color-background--quaternary: #f9f9f9;
+    --color-background--ternary: #f9a24b;
+    --color-background--quinary: #e4fcfc;
+    --color-border--primary: #d9dadb;
+    --color-border--secondary: #3d3f42;
+    --color-border--tertiary: #f9a24b;
+    --color-border--quaternary: #d9dadb;
+    --color-border--ternary: #f9a24b;
+    --color-icon--primary: #99c2cc;
+    --box-shadow: 0 1px 12px 0 rgba(0, 0, 0, .2),
+      0 5px 5px -4px rgba(0, 0, 0, .12), 0 5px 6px 0 rgba(0, 0, 0, .14);
+    --box-shadow--hover: 0 1px 12px 0 rgba(0, 0, 0, .2),
+      0 5px 5px -4px rgba(0, 0, 0, .12), 0 5px 6px 0 rgba(0, 0, 0, .14);
+    --drop-shadow: drop-shadow(rgba(0, 0, 0, .5) 3px 3px 3px);
+    --elevation--sm: 0 1px 8px 0 rgba(0, 0, 0, .2);
+    --elevation--sm-hover: 0 0 6px 0 rgba(0, 0, 0, .2);
+    --elevation--md: 0 1px 8px 0 rgba(0, 0, 0, .2);
+    --elevation--md-hover: 0 0 6px 0 rgba(0, 0, 0, .2);
+    --elevation--lg: 0 1px 12px 0 rgba(0, 0, 0, .2);
+    --elevation--lg-hover: 0 0 12px 0 rgba(0, 0, 0, .2);
+    --focus-box-shadow: 0 0 2px 2px #9b9b9b;
+    /* FONT SIZE */
+    --fontSize--root: 100%;
+    --fontSize--root-sm: 100%;
+    --fontSize--root-md: 100%;
+    --fontSize--root-lg: 100%;
+    --fontSize--base: 1rem;
+    --fontSize--xxs: .625rem;
+    --fontSize--xs: .75rem;
+    --fontSize--sm: .875rem;
+    --fontSize--md: 1rem;
+    --fontSize--lg: 1.125rem;
+    --fontSize--xl: 1.25rem;
+    --fontSize--p: calc(1rem * 1.125);
+    --fontSize--p-sm: 1rem;
+    --fontSize--p-md: 1rem;
+    --fontSize--p-lg: 1rem;
+    --fontSize--a: 1rem;
+    --fontSize--ul: 1rem;
+    --fontSize--ol: 1rem;
+    --fontSize--sup: .75rem;
+    --fontSize--h1: calc(1rem * 1.25);
+    --fontSize--h1-sm: calc(1rem * 1.75);
+    --fontSize--h1-md: calc(1rem * 1.75);
+    --fontSize--h1-lg: calc(1rem * 1.75);
+    --fontSize--h2: calc(1rem * 1.125);
+    --fontSize--h2-sm: calc(1rem * 1.375);
+    --fontSize--h2-md: calc(1rem * 1.375);
+    --fontSize--h2-lg: calc(1rem * 1.375);
+    --fontSize--h3: calc(1rem * 1);
+    --fontSize--h3-sm: calc(1rem * 1.25);
+    --fontSize--h3-md: calc(1rem * 1.25);
+    --fontSize--h3-lg: calc(1rem * 1.25);
+    --fontSize--h4: calc(1rem * .875);
+    --fontSize--h4-sm: calc(1rem * 1.125);
+    --fontSize--h4-md: calc(1rem * 1.125);
+    --fontSize--h4-lg: calc(1rem * 1.125);
+    --fontSize--h5: calc(1rem * .875);
+    --fontSize--h5-sm: calc(1rem * 1.0625);
+    --fontSize--h5-md: calc(1rem * 1.0625);
+    --fontSize--h5-lg: calc(1rem * 1.0625);
+    --fontSize--h6: calc(1rem * .875);
+    --fontSize--h6-sm: 1rem;
+    --fontSize--h6-md: 1rem;
+    --fontSize--h6-lg: 1rem;
+    --fontSize--icon--xs: calc(1rem * 1.1);
+    --fontSize--icon--sm: calc(1rem * 1.25);
+    --fontSize--icon--md: calc(1rem * 1.5);
+    --fontSize--icon--lg: calc(1rem * 1.75);
+    --fontSize--icon--xl: calc(1rem * 2);
+    --fontSize--icon: calc(1rem * 1.1);
+    /* LINE HEIGHT */
+    --lineHeight: 1.5;
+    --lineHeight--icon: 1;
+    --Heading-lineHeight: 1.5;
+    --lineHeight--h1: 1.3;
+    --lineHeight--h2: 1.3333;
+    --lineHeight--h3: 1.375;
+    --lineHeight--h4: 1.4286;
+    --lineHeight--h5: 1.4286;
+    --lineHeight--h6: 1.4286;
+    /* BODY */
+    --Body-background: #fff;
+    --Body-color: #3d3f42;
+    --Body-fontSize: 1rem;
+    --Body-fontSize--sm: 1rem;
+    --Body-fontSize--md: 1rem;
+    --Body-fontSize--lg: 1rem;
+    --Body-lineHeight: 1.5;
+    --Body-maxWidth: 1440px;
+    --Body-minWidth: 320px;
+    /* FONT FAMILY */
+    --fontFamily: 'Open-Sans', 'Helvetica', sans-serif;
+    --fontFamily--secondary: 'Merriweather', serif;
+    /* FONT WEIGHT */
+    --fontWeight--light: 300;
+    --fontWeight--normal: 400;
+    --fontWeight--semibold: 600;
+    --fontWeight--bold: 700;
+    /* ICON... OVERRIDE?! WTF */
+    --color-icon--primary: #3d3f42;
+    /* SPACE */
+    --space--base: 1rem;
+    --space--body-gutter: 1rem;
+    --space--body-gutter--sm: 1rem;
+    --space--body-gutter--md: 1.5rem;
+    --space--body-gutter--lg: 1.25rem;
+    --space--between-components: 1rem;
+    --space--inside-components: 1rem;
+    --space--list-indent: 1rem;
+    --space--listItem-row: 1rem;
+    --space--sm: calc(1rem * 110%);
+    --space--md: calc(1rem * 120%);
+    --space--lg: calc(1rem * 130%);
+    --space-width--percent-full: 100%;
+    --space-height--percent-full: 100%;
+    --space-width--viewWidth-full: 100vw;
+    --space-height--viewHeight-full: 100vh;
+    /* TRANSITIONS */
+    --transition-timing-function: ease;
+    --transition-opacity--duration: 1s;
+    --transition-opacity--delay: .5s;
+    --transition-transform--duration: 1s;
+    --transition-transform--delay: .5s;
+    /* Z-INDEX */
+    --zIndex--unset: initial;
+    --zIndex--behind: -1;
+    --zIndex--default: 0;
+    --zIndex--pinned: 10;
+    --zIndex--dropdown: 20;
+    --zIndex--popover: 21;
+    --zIndex--navigationDropdown: 30;
+    --zIndex--appBarFixed: 50;
+    --zIndex--overflow: 800;
+    --zIndex--bar: 900;
+    --zIndex--modal: 1010;
+    --zIndex--modal--bg: 1000;
+    /* MARGIN */
+    --Margin-xxl: 3rem;
+    --Margin-xl: 2rem;
+    --Margin-lg: 1.5rem;
+    --Margin-md: 1rem;
+    --Margin-sm: .5rem;
+    --Margin-xs: .25rem;
+    /* SPACE... AGAIN?! WTF */
+    --Space--xs: .5rem;
+    --Space--sm: 1rem;
+    --Space--md: 1.5rem;
+    --Space--lg: 2rem;
+    --Space--xl: 2.5rem;
+    /* TABLE */
+    --Table-table-fontSize: 1rem;
+    --Table-th-border: 1px solid #d9dadb;
+    --Table-th-borderBottom: 6px solid #1e6785;
+    --Table-th-backgroundColor: #eef3f6;
+    --Table-th-padding: .75rem 1rem;
+    --Table-td-padding: .75rem 1rem;
+    --Table-td-border: 1px solid #d9dadb;
+    --Table-tfooter-fontSize: .875rem;
+  }
+  
+  @value bpSmall: 640px;
+  @custom-media --bp-sm (min-width: 640px);
+  @value bpMedium: 1040px;
+  @custom-media --bp-md (min-width: 1040px);
+  @value bpLarge: 1200px;
+  @custom-media --bp-lg (min-width: 1200px);
+  @custom-selector :--accessible-links :hover, :focus;
+  
