@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Loading } from '../utils/PreLoading';
+import { load } from './PreLoading';
 
-function FactoryComponent(moduleName, componentName) {
+function MicroFrontEndLoader(url, moduleName, componentName) {
   class ComponentWrapper extends Component {
     state = {
       DynamicComponent: global[moduleName] && global[moduleName][componentName]
     };
     async componentDidMount() {
       if (!global[moduleName]) {
-        Loading(`/${moduleName.toLowerCase()}`).then((amdModule) => {
+        load(url, moduleName).then((amdModule) => {
           this.setState({ DynamicComponent: amdModule[componentName] });
         });
       }
@@ -27,6 +27,4 @@ function FactoryComponent(moduleName, componentName) {
   return ComponentWrapper;
 }
 
-export default class MicroFrontends extends Component {
-  static Topic = FactoryComponent('Topic', 'TopicComponent');
-}
+export default MicroFrontEndLoader;
