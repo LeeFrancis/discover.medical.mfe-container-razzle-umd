@@ -30,7 +30,8 @@
   },
   "scripts": {
     "start": "PORT=3020 react-scripts start",
-    "build": "webpack --config webpack.config.js",
+    "clean": "node ./clean.js",
+    "build": "npm run clean && webpack --config webpack.config.js",
     "server": "NODE_ENV=production node server/index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
